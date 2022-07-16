@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.rmi.registry.Registry;
+import java.util.Random;
 
 public class User
 {
@@ -23,7 +24,7 @@ public class User
         pw.setBounds(50,50,150,20);
 
         JPasswordField pwi = new JPasswordField();
-        pw1.setBounds(200.50,150,20);
+        pwi.setBounds(200,50,150,20);
 
         JButton s = new JButton("Login");
         s.setBounds(100,260,100,40);
@@ -49,7 +50,7 @@ public class User
                     c.printStackTrace();
                     return;
                 }
-                String y= pw1.getText();
+                String y= pwi.getText();
                 String z = v.pass;
 
                 if(y.compareTo(z)==0) {
@@ -72,7 +73,7 @@ public class User
         j1.add(un);
         j1.add(un1);
         j1.add(pw);
-        j1.add(pw1);
+        j1.add(pwi);
         j1.add(s);
         j1.add(c);
 
